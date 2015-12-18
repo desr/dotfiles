@@ -1,0 +1,6 @@
+out_to_x no
+out_to_console yes
+update_interval 1
+
+TEXT
+${texeci 60 ip a | egrep "inet .*global" | awk '{print $2}' | cut -d/ -f1} < ${cpu}% < ${mem}/${memmax} < ${time %a %d/%m} @ ${time %H:%M:%S}
