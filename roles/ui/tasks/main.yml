@@ -1,0 +1,21 @@
+---
+- name: Install X11 and utilities
+  pacman: name={{item}} state=present
+  with_items:
+    - xorg-server
+    - xorg-server-utils
+    - xorg-xinit
+    - xf86-video-vesa
+    - xf86-video-ati
+    - xf86-video-intel
+    - xf86-video-nouveau
+    - mesa
+    - slock
+    - dunst
+    - xsel
+    - conky
+    - rxvt-unicode
+
+- name: Install Clipmenu
+  get_url: url=https://raw.githubusercontent.com/cdown/clipmenu/develop/clipmenu dest=/usr/bin/clipmenu mode=755
+  get_url: url=https://raw.githubusercontent.com/cdown/clipmenu/develop/clipmenud dest=/usr/bin/clipmenud mode=755

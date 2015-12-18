@@ -1,0 +1,18 @@
+---
+- hosts: localhost
+  connection: local
+  user: david
+  sudo: true
+  vars:
+    user: david
+
+  roles:
+    - ui
+    - development
+    - web
+    - graphics
+    - audio
+    - user
+    - utilities
+    - communication
+    - virtualization
