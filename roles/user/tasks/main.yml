@@ -17,7 +17,21 @@
   become: yes
   become_user: "{{user}}"
 
+- name: Install TPM plugins
+  shell: /home/{{user}}/.tmux/plugins/tpm/bin/install_plugins
+  args:
+    creates: /home/{{user}}/.tmux/plugins/tmux-colors-solarized
+  become: yes
+  become_user: "{{user}}"
+
 - name: Install Vundle
   git: repo=https://github.com/VundleVim/Vundle.vim.git dest=~/.vim/bundle/Vundle.vim
+  become: yes
+  become_user: "{{user}}"
+
+- name: Install Vundle plugins
+  shell: vim +PluginInstall +qall
+  args:
+    creates: /home/{{user}}/.vim/bundle/syntastic
   become: yes
   become_user: "{{user}}"
