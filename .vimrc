@@ -13,7 +13,7 @@ if !filereadable(vundle_readme)
 	let vundle_installed=0
 endif
 
-" Add Vundle to runtime path and initialise. 
+" Add Vundle to runtime path and initialise.
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
@@ -22,7 +22,8 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Plugin list.
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'bling/vim-airline'
+Bundle 'vim-airline/vim-airline'
+Bundle 'vim-airline/vim-airline-themes'
 Bundle 'jiangmiao/auto-pairs'
 Bundle 'kien/ctrlp.vim'
 Bundle 'klen/python-mode'
