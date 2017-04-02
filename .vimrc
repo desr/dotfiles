@@ -1,8 +1,9 @@
 " Required for Vundle
 set nocompatible
 filetype off
+set encoding=utf-8              " Set default encoding to UTF-8"
 
-" Automatic Vundle install. 
+" Automatic Vundle install.
 let vundle_installed=1
 let vundle_readme=expand('~/.vim/bundle/Vundle.vim/README.md')
 if !filereadable(vundle_readme)
