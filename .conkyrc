@@ -3,4 +3,4 @@ out_to_console yes
 update_interval 1
 
 TEXT
-${texeci 60 ip a | egrep "inet .*global" | awk '{print $2}' | cut -d/ -f1} < ${cpu}% < ${mem}/${memmax} < ${time %a %d/%m} @ ${time %H:%M:%S}
+${texeci 60 ip a | egrep "inet .*global" | awk '{print $2}' | cut -d/ -f1} <  ${battery BAT1} < ${cpu}% < ${mem}/${memmax} < ${time %a %d/%m} @ ${time %H:%M:%S}
