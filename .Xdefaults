@@ -3,9 +3,12 @@ URxvt*saveLines: 120000
 URxvt*internalBorder: 5
 URxvt.urgentOnBell: true
 
-URxvt*perl-ext: default,selection-to-clipboard
+URxvt*perl-ext: default,selection-to-clipboard,font-size
 
-URxvt*font:       xft:Terminess Powerline:size=11:antialias=true:hinting=true
+URxvt.keysym.C-equal: font-size:increase
+URxvt.keysym.C-minus: font-size:decrease
+
+URxvt*font:       xft:xos4 Terminess Powerline:size=11:antialias=true:hinting=true
 
 ! Solarized color scheme for the X Window System
 !
