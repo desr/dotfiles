@@ -33,6 +33,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'easymotion/vim-easymotion'
+Bundle 'tpope/vim-unimpaired'
 
 " Snipmate plugin and dependencies.
 " TODO: Replace with ultisnips and youcompleteme:
@@ -44,6 +45,10 @@ Bundle 'garbas/vim-snipmate'
 Bundle 'fatih/vim-go'
 
 Bundle 'leafgarland/typescript-vim'
+
+Bundle 'rodjek/vim-puppet'
+
+Bundle 'farmergreg/vim-lastplace'
 
 " Required
 call vundle#end()
@@ -188,6 +193,10 @@ let g:syntastic_javascript_checkers=['jshint']
 " Go linters.
 let g:syntastic_go_checks=['go', 'golint']
 
+let g:syntastic_rst_checkers=['sphinx']
+
+" let g:syntastic_puppet_checkers=['puppet-lint']
+
 " ---------
 " All files
 " ---------
@@ -234,8 +243,14 @@ autocmd FileType c set number
 " PHP
 " ---
 autocmd FileType php set number
+autocmd FileType php set noexpandtab
 
 " ----------
 " Typescript
 " ----------
 autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
+
+" ----------
+" Javascript
+" ----------
+autocmd FileType javascript set shiftwidth=2 softtabstop=2 tabstop=2
